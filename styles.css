@@ -278,9 +278,9 @@ img, video {
 
 @media (max-width: 600px) {
     .attribution { padding: 20px 0; }
-    .action-links { flex-direction: column; gap: 10px; }
+    .action-links { font-size: 0.75em; gap: 8px; }
+    .action-links a { padding: 6px 8px; }
     .action-links .separator { display: none; }
-    .action-links a { width: 100%; max-width: 200px; }
 }
 
 .pending-panel {
