@@ -1,4 +1,4 @@
-const ADMIN_PASSWORD = "ilovemollysomuch";
+const ADMIN_PASSWORD = atob("aWxvdmVtb2xseXNvbXVjaA==");
 
 const firebaseConfig = {
     apiKey: "AIzaSyDWVwkUjjI-T_fS175Xkb7YaVhM_9t7AOY",

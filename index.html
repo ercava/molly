@@ -13,7 +13,7 @@
     <div class="gallery-container">
         <div id="gallery" class="masonry">
             <!-- Images -->
-            <div class="item"><img loading="lazy" src="./molly1.jpeg" onclick="openModal(this)"></div>
+            <div class="item"><img loading="eager" fetchpriority="high" src="./molly1.jpeg" onclick="openModal(this)"></div>
             <div class="item"><img loading="lazy" src="./molly2.jpeg" onclick="openModal(this)"></div>
             <div class="item"><img loading="lazy" src="./molly3.jpeg" onclick="openModal(this)"></div>
             <div class="item"><img loading="lazy" src="./molly4.jpeg" onclick="openModal(this)"></div>
@@ -54,8 +54,8 @@
             <div class="item"><img loading="lazy" src="./molly59.jpeg" onclick="openModal(this)"></div>
             <div class="item"><img loading="lazy" src="./molly60.jpeg" onclick="openModal(this)"></div>
             <!-- Videos -->
-            <div class="item"><video src="./molly61.mp4" onclick="openModal(this)" muted loop autoplay></video></div>
-            <div class="item"><video src="./molly62.mp4" onclick="openModal(this)" muted loop autoplay></video></div>
+            <div class="item"><video loading="lazy" src="./molly61.mp4" onclick="openModal(this)" muted loop autoplay playsinline></video></div>
+            <div class="item"><video loading="lazy" src="./molly62.mp4" onclick="openModal(this)" muted loop autoplay playsinline></video></div>
         </div>
     </div>
 
@@ -187,6 +187,13 @@
         // Make modal background close the modal
         document.getElementById('modal').addEventListener('click', function(e) {
             if(e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Keyboard support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
                 closeModal();
             }
         });
